@@ -305,7 +305,7 @@ export function ContactSection() {
 
         {/* Map embed */}
         <AnimateOnScroll delay={0.2} className="mt-12">
-          <div className="rounded-2xl overflow-hidden border border-gold/15 shadow-2xl aspect-[16/6]">
+          <div className="rounded-2xl overflow-hidden border border-gold/15 shadow-2xl aspect-[4/3] sm:aspect-[16/7] md:aspect-[16/6]">
             <iframe
               title="BFGR Office Location — Banigala, Islamabad"
               src={contactInfo.mapEmbedUrl}

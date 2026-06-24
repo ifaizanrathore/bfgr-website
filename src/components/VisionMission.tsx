@@ -54,7 +54,7 @@ export function VisionMission() {
         >
           {items.map((item) => (
             <StaggerItem key={item.label}>
-              <div className="group relative h-full rounded-2xl p-8 md:p-10 border border-gold/15 bg-white/[0.04] hover:bg-white/[0.07] hover:border-gold/30 transition-all duration-400 flex flex-col">
+              <div className="group relative h-full rounded-2xl p-6 md:p-10 border border-gold/15 bg-white/[0.04] hover:bg-white/[0.07] hover:border-gold/30 transition-all duration-400 flex flex-col">
                 {/* Icon */}
                 <div className="w-14 h-14 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center mb-6 group-hover:bg-gold/15 transition-colors duration-300">
                   <item.icon className="text-gold" size={26} />

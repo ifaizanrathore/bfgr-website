@@ -67,7 +67,7 @@ export function Leadership() {
           </AnimateOnScroll>
 
           {/* Bio & details */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 min-w-0">
             <AnimateOnScroll delay={0.1}>
               <p className="text-cream/70 text-base leading-relaxed font-sans mb-8">
                 {chairman.bio}

@@ -4,7 +4,19 @@
       "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\raza\\\\src\\\\data\")",
       "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\raza\\\\src\\\\components\\\\ui\")",
       "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\raza\\\\public\\\\images\")",
-      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\raza\\\\src\\\\app\\\\contact\")"
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\raza\\\\src\\\\app\\\\contact\")",
+      "PowerShell(Head -30)",
+      "PowerShell(Start-Sleep -Seconds 3; \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -TimeoutSec 15 -UseBasicParsing\\).StatusCode 2>&1)",
+      "PowerShell(\\(Invoke-WebRequest -Uri \"http://localhost:3000\" -TimeoutSec 15 -UseBasicParsing\\).StatusCode)",
+      "PowerShell(\\(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10\\).StatusCode; \\(Invoke-WebRequest -Uri \"http://localhost:3000/contact\" -UseBasicParsing -TimeoutSec 10\\).StatusCode)",
+      "PowerShell(\\(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10\\).StatusCode)",
+      "Bash(gh auth *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(gh repo *)",
+      "Bash(vercel --version)",
+      "PowerShell(vercel --version 2>&1)",
+      "Bash(git push *)"
     ]
   }
 }

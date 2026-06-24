@@ -48,7 +48,7 @@ export function BusinessSectors() {
                     <span className="section-number text-xs font-serif text-gold/60">
                       {String(idx + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="font-serif text-lg font-medium text-forest-dark leading-tight mt-0.5 group-hover:text-forest transition-colors duration-200">
+                    <h3 className="font-serif text-base md:text-lg font-medium text-forest-dark leading-tight mt-0.5 group-hover:text-forest transition-colors duration-200 wrap-break-word">
                       {sector.title}
                     </h3>
                   </div>

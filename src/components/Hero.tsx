@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { WorldMap } from "@/components/WorldMap";
 
 export function Hero() {
   const scrollToSection = (id: string) =>
@@ -35,7 +36,7 @@ export function Hero() {
       />
 
       <Container className="relative z-10 py-28 md:py-36">
-        <div className="max-w-3xl">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -53,7 +54,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, delay: 0.2 }}
-              className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[3.4rem] xl:text-[4rem] font-medium text-cream leading-[1.08] tracking-tight"
+              className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[3.4rem] xl:text-[4rem] font-medium text-cream leading-[1.08] tracking-tight wrap-break-word"
             >
               Transforming{" "}
               <span className="text-gold italic">Resources</span>
@@ -115,6 +116,35 @@ export function Hero() {
               ))}
             </motion.div>
           </div>
+
+          {/* ── RIGHT: World map ──────────────────────────────────────── */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, delay: 0.6 }}
+            className="hidden lg:flex items-center justify-center relative"
+          >
+            {/* Soft glow behind map */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse at center, rgba(201,162,39,0.06) 0%, transparent 70%)",
+              }}
+            />
+            <div className="w-full max-w-lg opacity-90">
+              <WorldMap />
+            </div>
+            {/* "Geographic Reach" label */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-2">
+              <span className="h-px w-6 bg-gold/30" />
+              <span className="text-gold/40 text-[9px] tracking-[0.3em] uppercase font-sans">
+                Geographic Reach
+              </span>
+              <span className="h-px w-6 bg-gold/30" />
+            </div>
+          </motion.div>
+
         </div>
       </Container>
 
