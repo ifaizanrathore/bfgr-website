@@ -63,7 +63,7 @@ export function CoreValues() {
             <StaggerItem key={value.title} className="h-full">
               <div className="group h-full flex flex-col p-6 rounded-xl border border-slate/10 hover:border-gold/30 hover:shadow-[0_8px_28px_rgba(201,162,39,0.11)] transition-all duration-300 bg-cream/50 hover:bg-white">
                 {/* Icon */}
-                <div className="flex-shrink-0 w-11 h-11 rounded-lg bg-forest/5 border border-forest/8 flex items-center justify-center mb-4 group-hover:bg-gold/10 group-hover:border-gold/20 transition-all duration-300">
+                <div className="shrink-0 w-11 h-11 rounded-lg bg-forest/5 border border-forest/8 flex items-center justify-center mb-4 group-hover:bg-gold/10 group-hover:border-gold/20 transition-all duration-300">
                   <value.icon
                     className="text-forest group-hover:text-gold transition-colors duration-300"
                     size={19}

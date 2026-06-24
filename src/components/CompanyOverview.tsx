@@ -1,7 +1,15 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimateOnScroll, StaggerChildren, StaggerItem } from "@/components/AnimateOnScroll";
 import { Globe2, TrendingUp, MapPin } from "lucide-react";
+
+const collageImages = [
+  { src: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600&h=400&fit=crop&auto=format&q=80", alt: "Pakistan mountains" },
+  { src: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&h=400&fit=crop&auto=format&q=80", alt: "International trade" },
+  { src: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&h=400&fit=crop&auto=format&q=80", alt: "Real estate construction" },
+  { src: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&h=400&fit=crop&auto=format&q=80", alt: "Renewable energy" },
+];
 
 const highlights = [
   {
@@ -72,12 +80,31 @@ export function CompanyOverview() {
             </AnimateOnScroll>
           </div>
 
-          {/* Right: highlight cards */}
+          {/* Right: photo collage + highlight cards */}
+          <div>
+            {/* 2×2 photo grid */}
+            <AnimateOnScroll delay={0.1}>
+              <div className="grid grid-cols-2 gap-2 mb-6 rounded-2xl overflow-hidden">
+                {collageImages.map((img, i) => (
+                  <div key={i} className="relative h-36 overflow-hidden">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-forest-dark/20" />
+                  </div>
+                ))}
+              </div>
+            </AnimateOnScroll>
+
           <StaggerChildren className="space-y-5" staggerDelay={0.12}>
             {highlights.map((item) => (
               <StaggerItem key={item.title}>
                 <div className="group flex gap-5 p-6 bg-white rounded-xl border border-slate/10 hover:border-gold/30 hover:shadow-[0_8px_32px_rgba(201,162,39,0.1)] transition-all duration-300">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-forest/5 flex items-center justify-center group-hover:bg-gold/10 transition-colors duration-300">
+                  <div className="shrink-0 w-12 h-12 rounded-lg bg-forest/5 flex items-center justify-center group-hover:bg-gold/10 transition-colors duration-300">
                     <item.icon
                       className="text-forest group-hover:text-gold transition-colors duration-300"
                       size={22}
@@ -126,6 +153,7 @@ export function CompanyOverview() {
               </div>
             </StaggerItem>
           </StaggerChildren>
+          </div>
         </div>
       </Container>
     </section>

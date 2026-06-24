@@ -69,7 +69,7 @@ export function Navbar() {
           className="flex items-center gap-3 group"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <div className="relative w-10 h-10 flex-shrink-0">
+          <div className="relative w-10 h-10 shrink-0">
             <Image
               src="/images/logo.png"
               alt="BFGR Logo"

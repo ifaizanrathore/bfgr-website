@@ -41,7 +41,7 @@ export function Leadership() {
             <div className="relative">
               {/* Photo */}
               {/* TODO: replace /public/images/chairman.jpeg with actual client photo */}
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-gold/20 shadow-2xl max-w-sm mx-auto lg:mx-0">
+              <div className="relative aspect-4/5 rounded-2xl overflow-hidden border border-gold/20 shadow-2xl max-w-sm mx-auto lg:mx-0">
                 <LeadershipPhoto
                   src={chairman.imagePath}
                   alt={`${chairman.name} — ${chairman.title}`}
@@ -99,7 +99,7 @@ export function Leadership() {
                 <StaggerItem key={item}>
                   <div className="flex items-start gap-3">
                     <CheckCircle2
-                      className="flex-shrink-0 text-gold/60 mt-0.5"
+                      className="shrink-0 text-gold/60 mt-0.5"
                       size={16}
                     />
                     <span className="text-cream/70 text-sm font-sans leading-snug">

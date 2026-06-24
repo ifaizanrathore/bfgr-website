@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimateOnScroll, StaggerChildren, StaggerItem } from "@/components/AnimateOnScroll";
@@ -50,8 +51,30 @@ export function InvestmentPartnership() {
             </AnimateOnScroll>
           </div>
 
-          {/* Right: partner tags */}
+          {/* Right: image + partner tags */}
           <div>
+            {/* Partnership photo */}
+            <AnimateOnScroll delay={0.08}>
+              <div className="relative h-56 rounded-2xl overflow-hidden mb-8 border border-gold/15">
+                <Image
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&h=500&fit=crop&auto=format&q=80"
+                  alt="Business partnership handshake"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-forest-dark/70 via-forest-dark/20 to-transparent" />
+                <div className="absolute bottom-4 left-5">
+                  <p className="text-gold text-xs tracking-widest uppercase font-sans font-medium">
+                    Building Lasting Partnerships
+                  </p>
+                  <p className="text-cream/80 text-sm font-sans mt-0.5">
+                    Together for a Better World
+                  </p>
+                </div>
+              </div>
+            </AnimateOnScroll>
+
             <AnimateOnScroll delay={0.1}>
               <p className="text-xs tracking-widest uppercase text-gold font-sans font-medium mb-6">
                 We Welcome
@@ -96,7 +119,7 @@ export function InvestmentPartnership() {
                     <li key={point} className="flex items-start gap-2.5 text-sm font-sans text-cream/75">
                       <ArrowRight
                         size={14}
-                        className="flex-shrink-0 text-gold mt-0.5"
+                        className="shrink-0 text-gold mt-0.5"
                       />
                       {point}
                     </li>

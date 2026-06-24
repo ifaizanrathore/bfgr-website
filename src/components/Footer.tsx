@@ -32,14 +32,14 @@ export function Footer() {
       }}
     >
       {/* Top border accent */}
-      <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+      <div className="h-px bg-linear-to-r from-transparent via-gold/40 to-transparent" />
 
       <Container className="py-14 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5 group">
-              <div className="relative w-12 h-12 flex-shrink-0">
+              <div className="relative w-12 h-12 shrink-0">
                 <Image
                   src="/images/logo.png"
                   alt="BFGR Logo"
@@ -114,7 +114,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-3.5">
               <li className="flex items-start gap-2.5">
-                <MapPin className="text-gold/50 flex-shrink-0 mt-0.5" size={14} />
+                <MapPin className="text-gold/50 shrink-0 mt-0.5" size={14} />
                 <span className="text-cream/55 text-xs font-sans leading-snug">
                   {contactInfo.address}
                 </span>
@@ -124,7 +124,7 @@ export function Footer() {
                   href={`mailto:${contactInfo.email}`}
                   className="flex items-center gap-2.5 text-cream/55 text-xs font-sans hover:text-gold transition-colors duration-200"
                 >
-                  <Mail className="text-gold/50 flex-shrink-0" size={14} />
+                  <Mail className="text-gold/50 shrink-0" size={14} />
                   {contactInfo.email}
                 </a>
               </li>
@@ -133,7 +133,7 @@ export function Footer() {
                   href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
                   className="flex items-center gap-2.5 text-cream/55 text-xs font-sans hover:text-gold transition-colors duration-200"
                 >
-                  <Phone className="text-gold/50 flex-shrink-0" size={14} />
+                  <Phone className="text-gold/50 shrink-0" size={14} />
                   {contactInfo.phone}
                 </a>
               </li>
@@ -144,7 +144,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2.5 text-cream/55 text-xs font-sans hover:text-gold transition-colors duration-200"
                 >
-                  <MessageCircle className="text-gold/50 flex-shrink-0" size={14} />
+                  <MessageCircle className="text-gold/50 shrink-0" size={14} />
                   {contactInfo.whatsapp}
                 </a>
               </li>
@@ -155,7 +155,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2.5 text-cream/55 text-xs font-sans hover:text-gold transition-colors duration-200"
                 >
-                  <Globe className="text-gold/50 flex-shrink-0" size={14} />
+                  <Globe className="text-gold/50 shrink-0" size={14} />
                   {contactInfo.website}
                 </a>
               </li>

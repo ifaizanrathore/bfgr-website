@@ -264,7 +264,7 @@ export function ContactSection() {
                   key={item.label}
                   className="flex gap-4 p-4 rounded-xl bg-white/[0.04] border border-gold/10 hover:border-gold/25 hover:bg-white/[0.07] transition-all duration-300 group"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center">
+                  <div className="shrink-0 w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center">
                     <item.icon className="text-gold" size={18} />
                   </div>
                   <div>
@@ -305,7 +305,7 @@ export function ContactSection() {
 
         {/* Map embed */}
         <AnimateOnScroll delay={0.2} className="mt-12">
-          <div className="rounded-2xl overflow-hidden border border-gold/15 shadow-2xl aspect-[4/3] sm:aspect-[16/7] md:aspect-[16/6]">
+          <div className="rounded-2xl overflow-hidden border border-gold/15 shadow-2xl aspect-4/3 sm:aspect-16/7 md:aspect-16/6">
             <iframe
               title="BFGR Office Location — Banigala, Islamabad"
               src={contactInfo.mapEmbedUrl}

@@ -27,12 +27,14 @@ export interface Sector {
   blurb: string
   activities: string[]
   highlight?: string
+  image: string
 }
 
 export const sectors: Sector[] = [
   {
     id: 'mining',
     icon: Gem,
+    image: 'https://images.unsplash.com/photo-1505395773834-f9d3a9b95d0f?w=800&h=400&fit=crop&auto=format&q=80',
     title: 'Mining, Exploration & Natural Resources',
     blurb:
       'Unlocking the untapped mineral wealth of Azad Jammu & Kashmir and beyond through responsible extraction, processing, and global export.',
@@ -50,6 +52,7 @@ export const sectors: Sector[] = [
   {
     id: 'realestate',
     icon: Building2,
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=400&fit=crop&auto=format&q=80',
     title: 'Real Estate Development & Property Investment',
     blurb:
       'Developing landmark residential, commercial, and industrial properties that shape communities and deliver lasting investment value.',
@@ -66,6 +69,7 @@ export const sectors: Sector[] = [
   {
     id: 'garments',
     icon: Shirt,
+    image: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&h=400&fit=crop&auto=format&q=80',
     title: 'Garments, Textiles & Apparel Manufacturing',
     blurb:
       'Delivering quality apparel manufacturing from Pakistan to global markets — from fashion to workwear, built on world-class craftsmanship.',
@@ -82,6 +86,7 @@ export const sectors: Sector[] = [
   {
     id: 'pharma',
     icon: Pill,
+    image: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&h=400&fit=crop&auto=format&q=80',
     title: 'Pharmaceuticals & Medical Supplies',
     blurb:
       'Improving healthcare access across regions through generic medicine manufacturing, supply chain management, and international procurement.',
@@ -98,6 +103,7 @@ export const sectors: Sector[] = [
   {
     id: 'surgical',
     icon: Stethoscope,
+    image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=800&h=400&fit=crop&auto=format&q=80',
     title: 'Surgical Equipment & Healthcare Products',
     blurb:
       'Leveraging Pakistan\'s world-renowned surgical instruments industry to supply premium medical devices to global healthcare systems.',
@@ -114,6 +120,7 @@ export const sectors: Sector[] = [
   {
     id: 'trade',
     icon: Globe2,
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=400&fit=crop&auto=format&q=80',
     title: 'Import, Export & Distribution Networks',
     blurb:
       'Connecting resource-rich regions with global markets through robust, reliable trade and distribution infrastructure.',
@@ -130,6 +137,7 @@ export const sectors: Sector[] = [
   {
     id: 'investments',
     icon: TrendingUp,
+    image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&h=400&fit=crop&auto=format&q=80',
     title: 'Strategic Investments & Emerging Ventures',
     blurb:
       'Pursuing high-impact opportunities at the intersection of sustainability, technology, and economic development.',
