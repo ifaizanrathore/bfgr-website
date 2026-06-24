@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* ─── Brand CSS Variables ─────────────────────────────────────────────────── */
+:root {
+  --forest: #0b3d2e;
+  --forest-dark: #072318;
+  --gold: #c9a227;
+  --gold-light: #e3c766;
+  --navy: #142b4a;
+  --charcoal: #0a0a0a;
+  --cream: #f7f8f5;
+  --slate: #4a5568;
+  --slate-light: #718096;
+}
+
+/* ─── Tailwind v4 Theme ───────────────────────────────────────────────────── */
+@theme {
+  --color-forest: #0b3d2e;
+  --color-forest-dark: #072318;
+  --color-forest-hover: #0f5240;
+  --color-gold: #c9a227;
+  --color-gold-light: #e3c766;
+  --color-gold-muted: #a07c1a;
+  --color-navy: #142b4a;
+  --color-charcoal: #0a0a0a;
+  --color-cream: #f7f8f5;
+  --color-cream-dark: #eef0eb;
+  --color-slate: #4a5568;
+  --color-slate-light: #718096;
+
+  --font-serif: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+
+  --shadow-gold: 0 0 0 2px #c9a227, 0 8px 32px rgba(201, 162, 39, 0.18);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.10);
+  --shadow-card-hover: 0 12px 48px rgba(0, 0, 0, 0.18);
+}
+
+/* ─── Base Styles ─────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Typography helpers ──────────────────────────────────────────────────── */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Gold underline accent */
+.gold-underline {
+  position: relative;
+}
+.gold-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+/* ─── Custom scrollbar ────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--forest-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-light);
+}
+
+/* ─── Focus styles ────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── Section number style ────────────────────────────────────────────────── */
+.section-number {
+  font-family: var(--font-serif);
+  color: var(--gold);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}

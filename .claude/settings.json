@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\raza\\\\src\\\\data\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\raza\\\\src\\\\components\\\\ui\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\raza\\\\public\\\\images\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"d:\\\\raza\\\\src\\\\app\\\\contact\")"
+    ]
+  }
+}
