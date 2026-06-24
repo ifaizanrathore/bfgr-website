@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import React from "react";
 
 type Variant = "gold" | "outline" | "ghost";
 type Size = "sm" | "md" | "lg";
@@ -36,6 +37,7 @@ export function Button({
   children,
   className,
   external,
+  onClick,
   ...props
 }: ButtonProps) {
   const cls = cn(base, variants[variant], sizes[size], className);
@@ -43,20 +45,30 @@ export function Button({
   if (href) {
     if (external) {
       return (
-        <a href={href} className={cls} target="_blank" rel="noopener noreferrer">
+        <a
+          href={href}
+          className={cls}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={onClick as unknown as React.MouseEventHandler<HTMLAnchorElement>}
+        >
           {children}
         </a>
       );
     }
     return (
-      <Link href={href} className={cls}>
+      <Link
+        href={href}
+        className={cls}
+        onClick={onClick as unknown as React.MouseEventHandler<HTMLAnchorElement>}
+      >
         {children}
       </Link>
     );
   }
 
   return (
-    <button className={cls} {...props}>
+    <button className={cls} onClick={onClick} {...props}>
       {children}
     </button>
   );

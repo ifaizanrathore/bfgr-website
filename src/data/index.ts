@@ -223,7 +223,7 @@ export const chairman = {
   name: 'Raza Muhammad Rathore',
   title: 'Chairman & Chief Executive Officer',
   subtitle: 'Visionary Leader & Development Professional',
-  imagePath: '/images/chairman.jpg',
+  imagePath: '/images/chairman.jpeg',
   bio: 'A seasoned executive and development professional with extensive leadership experience across corporate management, governance, supply chain, organizational development, public-private partnerships, and international cooperation. His visionary approach has guided BFGR from inception to a diversified multinational business group positioned at the nexus of South Asia and Central Asian markets.',
   pullQuote:
     '"Building sustainable enterprises that contribute to economic growth, employment generation, and social development while maintaining the highest standards of corporate governance."',
